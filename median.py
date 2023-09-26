@@ -1,6 +1,19 @@
 """Median calculator."""
 """ENTER YOUR SOLUTION HERE!"""
 
+
+def get_median(nums):
+    nums.sort()
+
+    if len(nums) == 1:
+        return nums[0]
+
+    if len(nums) % 2 == 0:
+        return (nums[len(nums)//2] + nums[len(nums)//2 - 1])/2
+
+    return nums[(len(nums))//2]
+
+
 while True:
     try:
         print("Enter a list of numbers separated by commas: ")
@@ -10,3 +23,5 @@ while True:
     else:
         break
 print(numbers)
+print(get_median(numbers))
+
